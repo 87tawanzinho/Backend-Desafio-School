@@ -10,7 +10,7 @@ export default async function (req: Request, res: Response) {
     if (existSemester) {
       return res
         .status(400)
-        .json({ error: "Matéria ja adicionada nesse bimestre" });
+        .json({ error: "Disciplina ja adicionada nesse bimestre" });
     }
 
     const newNote = new Notes({

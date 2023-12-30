@@ -7,8 +7,8 @@ export default async function deleteGrade(req: Request, res: Response) {
 
     await Notes.findOneAndDelete({ _id: id });
 
-    return res.status(200).json({ message: "Deleted with successfuly" });
+    return res.status(200).json({ message: "Deletado com sucesso." });
   } catch (err) {
-    return res.status(500).json({ message: "Error," + err });
+    return res.status(500).json({ message: "Erro," + err });
   }
 }
