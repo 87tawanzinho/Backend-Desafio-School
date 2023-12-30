@@ -6,5 +6,5 @@ const routes = express.Router();
 
 routes.get("/", getGrade);
 routes.post("/", createGrade);
-routes.delete("/", deleteGrade);
+routes.delete("/:id", deleteGrade);
 export default routes;

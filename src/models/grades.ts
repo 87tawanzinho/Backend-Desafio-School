@@ -8,7 +8,7 @@ const NotesSchema = new mongoose.Schema({
   },
   subject: {
     type: String,
-    enum: ["BIOLOGIA", "ARTES", "GEOGRAFIA", "SOCIOLOGIA"],
+    enum: ["Biologia", "Artes", "Geografia", "Sociologia"],
     required: true,
     unique: true,
   },
