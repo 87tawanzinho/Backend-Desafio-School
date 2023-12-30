@@ -27,8 +27,6 @@ const NotesSchema = new mongoose.Schema({
   },
 });
 
-NotesSchema.index({ semester: 1, subject: 1 }, { unique: true });
-
 const Notes = mongoose.model("Notes", NotesSchema);
 
 export default Notes;
