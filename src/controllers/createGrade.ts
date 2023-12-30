@@ -10,7 +10,7 @@ export default async function (req: Request, res: Response) {
     if (existSemester) {
       return res
         .status(400)
-        .json({ error: "Subject already added to this semester" });
+        .json({ error: "Matéria ja adicionada nesse bimestre" });
     }
 
     const newNote = new Notes({
@@ -23,6 +23,6 @@ export default async function (req: Request, res: Response) {
 
     res.status(201).json(newNote);
   } catch (error) {
-    res.status(500).json({ message: "an error occurred" + error });
+    res.status(500).json({ message: "Um erro ocorreu" + error });
   }
 }
