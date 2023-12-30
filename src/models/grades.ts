@@ -10,7 +10,6 @@ const NotesSchema = new mongoose.Schema({
     type: String,
     enum: ["Biologia", "Artes", "Geografia", "Sociologia"],
     required: true,
-    unique: true,
   },
   grade: {
     type: Number,
@@ -27,6 +26,8 @@ const NotesSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
+
+NotesSchema.index({ semester: 1, subject: 1 }, { unique: true });
 
 const Notes = mongoose.model("Notes", NotesSchema);
 
